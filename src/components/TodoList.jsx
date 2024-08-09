@@ -1,13 +1,8 @@
 //import React from 'react'
 import TodoCard from './TodoCard'; // Import the TodoCard component
 
-const TodoList = () => {
-
-  let todos = [
-    'Go to the store',
-    'Finish the tutorial',
-    'Clean the house'
-  ]
+const TodoList = (props) => {
+  const { todos } = props
 
   return (
     <ul className="main">
