@@ -5,6 +5,7 @@ import TodoInput from "./components/TodoInput"
 function App() {
 
   const [todos, setTodos] = useState([])
+  const [todoValue, setTodoValue] = useState('')
 
   function handleAddTodos(newTodo) {
     const newTodoList = [...todos, newTodo]
@@ -23,7 +24,7 @@ function App() {
   }
   return (
     <>
-      <TodoInput handleAddTodos={handleAddTodos} />
+      <TodoInput todoValue={todoValue} setTodoValue={setTodoValue} handleAddTodos={handleAddTodos} />
       <TodoList handleDeleteTodo={handleDeleteTodo} todos={todos} />
     </>
   )
